@@ -1,0 +1,48 @@
+site_name: Razon
+
+repo_url: https://github.com/ProjectRazon/Razon
+repo_name: Razon
+
+copyright: Copyright &copy; 2026 <a href="https://github.com/ProjectRazon">Project Razon</a>. All rights reserved.
+
+docs_dir: vault
+
+markdown_extensions:
+  - nl2br
+  - admonition
+  - tables
+  - toc:
+      permalink: "#"
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+  
+
+plugins:
+  - search
+  - callouts
+  - tags
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-mml-chtml.js
+
+theme:
+  name: material
+  custom_dir: overrides
+  palette: 
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+
+validation:
+  links:
+    not_found: ignore 
+    absolute_links: ignore
