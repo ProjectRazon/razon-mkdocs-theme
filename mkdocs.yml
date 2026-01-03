@@ -11,13 +11,13 @@ markdown_extensions:
   - nl2br
   - admonition
   - tables
+  - def_list
   - toc:
       permalink: "#"
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.arithmatex:
       generic: true
-  
 
 plugins:
   - search
