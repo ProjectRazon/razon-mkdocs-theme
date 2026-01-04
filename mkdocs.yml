@@ -1,4 +1,6 @@
-site_name: Razon
+site_name: Razon - The Free Knowledge Repository
+site_url: https://projectrazon.github.io/Razon/
+site_description: A free, open-source knowledge repository for self-studying anything - mathematics, physics, computer science, languages and more.
 
 repo_url: https://github.com/ProjectRazon/Razon
 repo_name: Razon
@@ -25,6 +27,27 @@ plugins:
   - callouts
   - tags
 
+  - rss:
+      match_path: ".*"
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
+
+  - minify:
+    minify_html: true
+    minify_js: true
+    minify_css: true
+    html_minifier_options:
+      collapse_whitespace: true
+      remove_comments: true
+
+  - git-revision-date-localized:
+      type: date
+      fallback_to_build_date: true
+      enable_creation_date: true
+
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-mml-chtml.js
 
@@ -41,7 +64,6 @@ theme:
 
 extra_css:
   - assets/stylesheets/extra.css
-
 
 validation:
   links:
