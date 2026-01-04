@@ -26,7 +26,6 @@ plugins:
   - search
   - callouts
   - tags
-
   - rss:
       match_path: ".*"
       date_from_meta:
@@ -34,15 +33,13 @@ plugins:
       categories:
         - categories
         - tags
-
   - minify:
-    minify_html: true
-    minify_js: true
-    minify_css: true
-    html_minifier_options:
-      collapse_whitespace: true
-      remove_comments: true
-
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      html_minifier_options:
+        collapse_whitespace: true
+        remove_comments: true
   - git-revision-date-localized:
       type: date
       fallback_to_build_date: true
@@ -58,9 +55,6 @@ theme:
     - scheme: slate
       primary: custom
       accent: custom
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
 
 extra_css:
   - assets/stylesheets/extra.css
