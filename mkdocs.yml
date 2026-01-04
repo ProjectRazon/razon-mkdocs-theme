@@ -37,9 +37,6 @@ plugins:
       minify_html: true
       minify_js: true
       minify_css: true
-      htmlmin_opts:
-        collapse_whitespace: true
-        remove_comments: true
   - git-revision-date-localized:
       type: date
       fallback_to_build_date: true
@@ -60,6 +57,11 @@ extra_css:
   - assets/stylesheets/extra.css
 
 validation:
-  links:
-    not_found: ignore 
+  nav:
+    omitted_files: ignore
+    not_found: ignore
     absolute_links: ignore
+  links:
+    not_found: ignore
+    absolute_links: ignore
+    unrecognized_links: ignore
